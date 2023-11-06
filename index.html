@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" href="./style.css">
+    
+
+</head>
+<body>
+    <!-- MAIN SECTION  -->
+    <section class="relative wrapper flex align-center">
+
+        <!-- MAIN BOX  -->
+        <div class="main-box bg-sky-900 w-[400px] m-auto rounded-lg">
+
+
+            <!-- TOP SECTION  -->
+            <div class="top-sec relative">
+
+                <h1 class="text-xl font-bold text-center text-white pt-6">PASSWORD GENERATER</h1>
+
+                <!-- PASSWORD INPUT  -->
+                <div class="border-2 w-[90%]  m-auto mt-12 relative rounded-lg">
+                    <input type="text" placeholder="" class="w-full p-4 bg-slate-700 rounded-lg relative"  readonly > 
+                    <p show-pass class="absolute top-4 left-5 text-white text-xl"></p>
+                    <!-- LOG  -->
+                    <div class="absolute right-4 top-3">   
+                        <button data-copy> 
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M384 336H192c-8.8 0-16-7.2-16-16V64c0-8.8 7.2-16 16-16l140.1 0L400 115.9V320c0 8.8-7.2 16-16 16zM192 384H384c35.3 0 64-28.7 64-64V115.9c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1H192c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H256c35.3 0 64-28.7 64-64V416H272v32c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192c0-8.8 7.2-16 16-16H96V128H64z"/>
+                            </svg>     
+                        </button> 
+
+                   </div>
+                  
+                </div>
+                <p popup-msg class="bg-yellow-300 absolute bg-gray-950 rounded-md top-14 right-5 pop-up p-2"></p>
+
+            </div>
+            
+
+            <!-- BELOW SECTION  -->
+            <div class="below-section flex flex-col gap-2 mt-4 w-[90%] m-auto relative text-white">
+
+                <div class="border-2  p-3 rounded-lg">
+                    <label for="">Password Length</label>
+
+                    <p class="absolute right-4 gg top-3" data-number></p>
+
+                </div>
+
+                <!-- SLIDER  -->
+                <div class="border-2  p-2 m-auto mt-2 w-full rounded-lg">
+                    <input type="range" min="1" max="20" step="1" class="w-full" data-len-slider>
+                </div>
+
+                <!-- BOX -->
+                <div>
+                    <input type="checkbox" id="upper-case"> 
+                    <label>Include upper case</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="lower-case"> 
+                    <label>Include Lower case</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="number">
+                     <label>Include Number</label>
+                    </div>
+
+                <div>
+                    <input type="checkbox" id="symbole">
+                    <label> Include symbole</label>
+                </div>
+
+                <div class="strength relative p-2 ">
+
+                    <p class="text-lg font-bold w-[50%]">Strength</p>
+
+                    <div class=" absolute right-4 top-3 w-[20px] h-[20px] rounded-full" data-indicator></div>
+
+                </div>
+
+                <!-- BUTTON  -->
+                <button class="bg-blue-500 p-3 mb-2 rounded-lg text-white" id="generate-button">Generate password</button>
+            </div>
+
+        </div>
+
+    </section>
+</body>
+<script src="https://cdn.tailwindcss.com"></script>
+    <script src="./index.js"></script>
+</html>

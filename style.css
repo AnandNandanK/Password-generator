@@ -1,0 +1,23 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(141, 107, 191);
+}
+    
+
+
+
+.pop-up{
+    scale: 0;
+    animation-duration: 0.5s;
+    transition: ease-in-out;
+}
+
+.active{
+    scale:1;
+}
